@@ -1,39 +1,109 @@
 <!doctype html>
 <html lang="nb">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lone Lashes ✨ Vippeextensions</title>
-  <meta name="description" content="Klassisk · Hybrid · Volum · Påfyll · Fjerning. Hjemmesalong i Sandnes. Bestill time – ring eller send melding.">
-  <style>
-    :root { --bg:#fff; --txt:#111; --acc:#ff4fa3; --mut:#666; }
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Arial,sans-serif;color:var(--txt);background:var(--bg)}
-    header{padding:56px 20px;text-align:center;border-bottom:1px solid #eee}
-    h1{font-size:2.1rem;margin:0 0 6px}
-    .tag{color:#fff;background:var(--acc);display:inline-block;padding:6px 10px;border-radius:999px;font-weight:600}
-    .wrap{max-width:900px;margin:0 auto;padding:28px 20px}
-    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    .card{border:1px solid #eee;border-radius:14px;padding:18px}
-    .card h3{margin:0 0 8px}
-    .mut{color:var(--mut)}
-    .cta{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:700}
-    footer{padding:28px 20px;text-align:center;color:var(--mut);border-top:1px solid #eee}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lone Lashes ✨ Vippeextensions i Sandnes</title>
+<meta name="description" content="Glitter, glam og presisjon. Klassisk · Hybrid · Volum · Påfyll · Fjerning. Bestill time – ring eller send melding.">
+<style>
+  :root{
+    --bg:#0b0a0d;         /* mørk bakgrunn */
+    --txt:#f9f8ff;        /* lys tekst */
+    --mut:#bfb9d6;        /* dempet tekst */
+    --acc:#ff4fa3;        /* rosa aksent */
+    --acc2:#9b5bff;       /* lilla aksent */
+    --card:#16141a;       /* kortbakgrunn */
+    --ring:#ffe27a;       /* gull-ish */
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family: ui-sans-serif, system-ui, Arial, sans-serif;
+    color:var(--txt); background:var(--bg);
+    background-image:
+      radial-gradient(ellipse at top left, #211b2a 0%, transparent 60%),
+      radial-gradient(ellipse at bottom right, #171320 0%, transparent 60%);
+  }
+  a{color:inherit}
+  header{
+    position:relative; padding:84px 20px 64px; text-align:center; overflow:hidden;
+  }
+  /* glam gradient */
+  .glow{
+    position:absolute; inset:-40%; filter:blur(60px); z-index:0;
+    background: conic-gradient(from 180deg at 50% 50%, var(--acc), var(--acc2), #ffd1f1, var(--acc));
+    opacity:.35; animation: swirl 18s linear infinite;
+  }
+  @keyframes swirl{to{transform:rotate(360deg)}}
+
+  /* sparkles */
+  .sparkles::after{
+    content:""; position:absolute; inset:0; pointer-events:none; z-index:1;
+    background:
+      radial-gradient(circle, rgba(255,255,255,.9) 0 1px, transparent 2px) 0 0/6px 6px,
+      radial-gradient(circle, rgba(255,255,255,.4) 0 1px, transparent 2px) 3px 3px/8px 8px;
+    mix-blend-mode:screen; opacity:.25; animation: twinkle 3.6s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle{from{opacity:.15} to{opacity:.35}}
+
+  h1{font-size:clamp(1.9rem, 3.5vw, 3rem); margin:8px 0 6px; position:relative; z-index:2}
+  .tag{
+    position:relative; z-index:2; display:inline-block; padding:8px 14px; border-radius:999px;
+    background:linear-gradient(90deg,var(--acc),var(--acc2));
+    color:#fff; font-weight:700; letter-spacing:.3px;
+    box-shadow:0 0 0 2px rgba(255,255,255,.08), 0 6px 24px rgba(255,79,163,.35);
+  }
+  .mut{color:var(--mut)}
+  .cta{
+    position:relative; z-index:2; display:inline-block; margin-top:16px; padding:12px 18px;
+    border-radius:12px; text-decoration:none; font-weight:800;
+    background:linear-gradient(90deg,var(--acc),var(--acc2));
+    box-shadow:0 10px 30px rgba(155,91,255,.35); color:#fff;
+  }
+
+  .wrap{max-width:1100px; margin:0 auto; padding:28px 20px}
+  .cards{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{
+    background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.35);
+  }
+  .card h3{margin:0 0 8px}
+  .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06)}
+  .divider{height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent); margin:22px 0}
+
+  /* galleri */
+  .gallery{display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); margin-top:10px}
+  .shot{
+    position:relative; overflow:hidden; border-radius:14px; aspect-ratio:1/1;
+    background:#0f0d13; border:1px solid rgba(255,255,255,.07);
+  }
+  .shot img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.1)}
+  .shot::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.25));
+  }
+
+  footer{padding:28px 20px; text-align:center; color:var(--mut)}
+  #y{opacity:.9}
+
+  /* ring highlight på telefon/SMS-lenker */
+  .ring{box-shadow:0 0 0 4px rgba(255,226,122,.15), 0 0 0 1px rgba(255,226,122,.35) inset}
+</style>
 </head>
-<body>
+<body class="sparkles">
   <header>
+    <div class="glow" aria-hidden="true"></div>
     <span class="tag">Lone Lashes</span>
-    <h1>Vippeextensions i hjemmesalong ✨</h1>
+    <h1>Glam lashes ✨ presisjon & shine</h1>
     <p class="mut">Klassisk · Hybrid · Volum · Påfyll · Fjerning</p>
-    <a class="cta" href="tel:+4790020043">Ring 900 20 043</a>
-    <!-- Eller bytt til meldingslenke: href="https://wa.me/4790020043" -->
+    <a class="cta ring" href="tel:+4790020043">Ring 900 20 043</a>
+    <!-- Eller WhatsApp: <a class="cta" href="https://wa.me/4790020043">Send melding</a> -->
   </header>
 
   <main class="wrap">
-    <section class="grid">
+    <section class="cards">
       <article class="card">
         <h3>Priser</h3>
-        <p class="mut">Klassisk: 799,-<br>Hybrid: 899,-<br>Volum: 999,-<br>Påfyll fra: 499,-</p>
+        <p class="mut">Klassisk <span class="pill">799,-</span><br>Hybrid <span class="pill">899,-</span><br>Volum <span class="pill">999,-</span><br>Påfyll fra <span class="pill">499,-</span></p>
       </article>
       <article class="card">
         <h3>Åpningstider</h3>
@@ -41,17 +111,33 @@
       </article>
       <article class="card">
         <h3>Adresse</h3>
-        <p class="mut">Sandnes (nøyaktig adresse ved booking)</p>
+        <p class="mut">Sandnes · nøyaktig adresse gis ved booking</p>
       </article>
       <article class="card">
-        <h3>Regler</h3>
-        <p class="mut">Kom uten øyesminke. Avbestill senest 24t før. Sen ankomst kan forkorte timen.</p>
+        <h3>Før timen</h3>
+        <p class="mut">Kom uten øyesminke. Unngå koffein rett før. Avbestill senest 24t før.</p>
       </article>
     </section>
-    <p style="margin-top:10px">Klar? 👉 <a class="cta" href="sms:+4790020043">Send SMS for time</a></p>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2 style="margin:0 0 10px">Stemning & arbeid</h2>
+      <p class="mut" style="margin-top:0">Tilfeldige “salong/beauty/vipper”-shots – kan byttes når du vil.</p>
+      <div class="gallery">
+        <!-- Du kan bytte disse URL-ene med egne bilder i /assets/ senere -->
+        <a class="shot" href="#"><img alt="Lash close-up" src="https://images.unsplash.com/photo-1600948578493-2a4b2b4b1d4b?q=80&w=800&auto=format&fit=crop" /></a>
+        <a class="shot" href="#"><img alt="Beauty studio" src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop" /></a>
+        <a class="shot" href="#"><img alt="Lash tools" src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=800&auto=format&fit=crop" /></a>
+        <a class="shot" href="#"><img alt="Makeup lights" src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" /></a>
+        <a class="shot" href="#"><img alt="Salon chair" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop" /></a>
+        <a class="shot" href="#"><img alt="Eye with long lashes" src="https://images.unsplash.com/photo-1602489058326-2d6fb6691431?q=80&w=800&auto=format&fit=crop" /></a>
+      </div>
+      <p style="margin-top:14px">Klar? 👉 <a class="cta ring" href="sms:+4790020043">Send SMS for time</a></p>
+    </section>
   </main>
 
-  <footer>© <span id="y"></span> Lone Lashes · Sandnes</footer>
+  <footer>© <span id="y"></span> Lone Lashes · Sandnes · Instagram: @lonelashes</footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
