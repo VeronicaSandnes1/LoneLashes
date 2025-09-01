@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lone Lashes ✨ Vippeextensions</title>
+  <meta name="description" content="Klassisk · Hybrid · Volum · Påfyll · Fjerning. Hjemmesalong i Sandnes. Bestill time – ring eller send melding.">
+  <style>
+    :root { --bg:#fff; --txt:#111; --acc:#ff4fa3; --mut:#666; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,Arial,sans-serif;color:var(--txt);background:var(--bg)}
+    header{padding:56px 20px;text-align:center;border-bottom:1px solid #eee}
+    h1{font-size:2.1rem;margin:0 0 6px}
+    .tag{color:#fff;background:var(--acc);display:inline-block;padding:6px 10px;border-radius:999px;font-weight:600}
+    .wrap{max-width:900px;margin:0 auto;padding:28px 20px}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{border:1px solid #eee;border-radius:14px;padding:18px}
+    .card h3{margin:0 0 8px}
+    .mut{color:var(--mut)}
+    .cta{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:10px;background:var(--acc);color:#fff;text-decoration:none;font-weight:700}
+    footer{padding:28px 20px;text-align:center;color:var(--mut);border-top:1px solid #eee}
+  </style>
+</head>
+<body>
+  <header>
+    <span class="tag">Lone Lashes</span>
+    <h1>Vippeextensions i hjemmesalong ✨</h1>
+    <p class="mut">Klassisk · Hybrid · Volum · Påfyll · Fjerning</p>
+    <a class="cta" href="tel:+4790020043">Ring 900 20 043</a>
+    <!-- Eller bytt til meldingslenke: href="https://wa.me/4790020043" -->
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+      <article class="card">
+        <h3>Priser</h3>
+        <p class="mut">Klassisk: 799,-<br>Hybrid: 899,-<br>Volum: 999,-<br>Påfyll fra: 499,-</p>
+      </article>
+      <article class="card">
+        <h3>Åpningstider</h3>
+        <p class="mut">Man–Fre: 10–18<br>Lør: 11–16<br>Søndag: etter avtale</p>
+      </article>
+      <article class="card">
+        <h3>Adresse</h3>
+        <p class="mut">Sandnes (nøyaktig adresse ved booking)</p>
+      </article>
+      <article class="card">
+        <h3>Regler</h3>
+        <p class="mut">Kom uten øyesminke. Avbestill senest 24t før. Sen ankomst kan forkorte timen.</p>
+      </article>
+    </section>
+    <p style="margin-top:10px">Klar? 👉 <a class="cta" href="sms:+4790020043">Send SMS for time</a></p>
+  </main>
+
+  <footer>© <span id="y"></span> Lone Lashes · Sandnes</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
